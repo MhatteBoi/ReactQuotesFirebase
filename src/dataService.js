@@ -1,5 +1,3 @@
-
-
 import { database } from './firebase';
 import { ref, set, get } from "firebase/database";
 

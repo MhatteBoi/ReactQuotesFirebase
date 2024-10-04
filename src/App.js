@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import { fetchFromFirebase, saveToFirebase } from './dataService';
-import { database } from './firebase';  // Import the initialized Firebase app
 
 import React, { useState, useEffect } from 'react';
 

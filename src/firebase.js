@@ -6,18 +6,17 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDYKONUUChbtklJDdWoJrUcsQCItVUWkPE",
-  authDomain: "react-quotes-3a3fd.firebaseapp.com",
-  databaseURL: "https://react-quotes-3a3fd-default-rtdb.firebaseio.com",
-  projectId: "react-quotes-3a3fd",
-  storageBucket: "react-quotes-3a3fd.appspot.com",
-  messagingSenderId: "167288033417",
-  appId: "1:167288033417:web:99fad9f3489b6fd8cab658"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const database = getDatabase(app);
 
 export { database };  // Export the database
