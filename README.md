@@ -1,6 +1,6 @@
 ### Welcome to react quotes
 
-This is a React application built with Create React App. It's a this code sets up a simple React application that allows users to enter a message, save it to Firebase, and view the saved message and a history of previous inputs.
+This project is a simple React application that allows users to save messages to Firebase. It features a history sidebar to display the last 10 saved messages and uses Firebase for data storage. The app is styled with Tailwind CSS for responsiveness. Its just my first react app, follow me to se what else i might make
 
 ### Getting Started
 
@@ -8,13 +8,16 @@ To run the app in development mode, navigate to the project directory and run np
 
 ### Features
 
-[List any notable features of your app, e.g. "add and remove todo items", "display blog posts", etc.]
-Deployment
+List the main features of your project. Focus on what makes it unique and useful.
+
+Save messages to Firebase in real-time.
+
+View the last 10 saved messages in a sidebar.
+
+Responsive design with Tailwind CSS.
+
 
 To deploy the app, run npm run build to create a production-ready build in the build folder. You can then deploy the app to your preferred hosting platform.
 
 ### Learn More
 
-For more information on Create React App and how to customize this project, check out the Create React App documentation.
-
-Replace [Your App Name] with the actual name of your app, and fill in the details about your app's features and functionality.
