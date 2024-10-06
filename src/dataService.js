@@ -3,20 +3,30 @@ import { ref, set, get } from "firebase/database";
 
 
 // Function to save data to Firebase
-export function saveToFirebase(data) {
-    const dbRef = ref(database, 'messages/');
-    return set(dbRef, {
-      message: data
+export async function saveToFirebase(data) {
+  try {
+    const dbRef = ref(database, 'messages/'); // Reference to 'messages' node
+    await set(dbRef, {
+      message: data,
     });
+    console.log('Data saved to Firebase');
+  } catch (error) {
+    console.error('Error saving data:', error);
   }
+}
 
-  // Function to fetch data from Firebase
+// Function to fetch data from Firebase
 export async function fetchFromFirebase() {
-    const dbRef = ref(database, 'messages/');
+  try {
+    const dbRef = ref(database, 'messages/'); // Reference to 'messages' node
     const snapshot = await get(dbRef);
     if (snapshot.exists()) {
-      return snapshot.val().message;
+      return snapshot.val().message; // Return the message if it exists
     } else {
       return 'No data found';
     }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return 'Error fetching data';
   }
+}
